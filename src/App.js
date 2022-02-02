@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import PhoneContext from "./contexts/phoneContext/phoneContext";
+
 function App() {
+  const value = useContext(PhoneContext);
   return (
     <>
-      {" "}
-      <span className="message">Calling...</span>
+      <span className="message">Calling...{value}</span>
       <main className="phone">
         <div className="keyboard-container">
           <ol className="keyboard">
@@ -51,7 +54,6 @@ function App() {
           </a>
         </div>
       </main>
-      ;
     </>
   );
 }
