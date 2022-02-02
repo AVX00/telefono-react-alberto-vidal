@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import PhoneContextProvider from "../../contexts/phoneContext/phoneContextProvider";
+import PhoneContext from "../../contexts/phoneContext/phoneContext";
 import Info from "./Info";
 
 describe("Given a Info component", () => {
   describe("when it's rendered '", () => {
     test("Then it should display the text 'Calling...", () => {
       const expectedText = "Calling...";
-      const isCalling = false;
+      const value = false;
 
       render(
-        <PhoneContextProvider>
-          <Info isCalling={isCalling} />
-        </PhoneContextProvider>
+        <PhoneContext.Provider value={value}>
+          <Info />
+        </PhoneContext.Provider>
       );
       const text = screen.queryByText(expectedText);
 
