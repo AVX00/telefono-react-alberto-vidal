@@ -1,11 +1,9 @@
-import { useContext } from "react";
-import PhoneContext from "./contexts/phoneContext/phoneContext";
+import Info from "./components/Info/Info";
 
 function App() {
-  const value = useContext(PhoneContext);
   return (
     <>
-      <span className="message">Calling...{value}</span>
+      <Info />
       <main className="phone">
         <div className="keyboard-container">
           <ol className="keyboard">
