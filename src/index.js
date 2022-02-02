@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import PhoneContextProvider from "./contexts/phoneContext/phoneContextProvider";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PhoneContextProvider>
+      <App />
+    </PhoneContextProvider>
   </React.StrictMode>,
   document.getElementById("container")
 );

@@ -1,6 +1,6 @@
-import React from "react";
+import { createContext } from "react";
 
-const PhoneContext = React.createContext();
-PhoneContext.displayName("PhoneContext");
+const PhoneContext = createContext();
+PhoneContext.displayName = "PhoneContext";
 
 export default PhoneContext;
