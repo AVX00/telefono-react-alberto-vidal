@@ -1,5 +1,6 @@
 import Display from "./components/Display/Display";
 import Info from "./components/Info/Info";
+import Action from "./components/Action/Action";
 
 function App() {
   return (
@@ -45,12 +46,7 @@ function App() {
         </div>
         <div className="actions">
           <Display />
-          <a href="call" className="call">
-            Call
-          </a>
-          <a href="hang" className="hang active">
-            Hang
-          </a>
+          <Action />
         </div>
       </main>
     </>
